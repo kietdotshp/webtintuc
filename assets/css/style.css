@@ -74,6 +74,13 @@ a {
   overflow: hidden;
 }
 
+.text-line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .image-padding-top {
   position: relative;
   padding-top: 56.25%;
