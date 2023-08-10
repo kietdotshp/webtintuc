@@ -11,6 +11,7 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -48,10 +49,12 @@
         </section>
       </div>
 
-      <div class="line-seperate"></div>
+      <div class="line-seperate-horizontal"></div>
 
       <div class="container-custom">
-        <section class="d-flex align-items-center justify-content-between py-3 py-lg-0">
+        <section
+          class="d-flex align-items-center justify-content-between py-3 py-lg-0"
+        >
           <div class="d-flex align-items-center gap-4 gap-xxl-5">
             <a href="javascript:void(0)">
               <i class="fa-solid fa-house-chimney color-primary"></i>
@@ -81,9 +84,9 @@
               </div>
             </div>
 
-            <div class="d-none d-xl-block">|</div>
+            <div class="d-lg-none d-xl-block">|</div>
 
-            <div class="d-none d-xl-flex align-items-center gap-3">
+            <div class="d-lg-none d-xl-flex align-items-center gap-3">
               <a href="javascript:void(0)">
                 <i class="fa-brands fa-facebook-f"></i>
               </a>
@@ -100,7 +103,172 @@
     </header>
 
     <!-- Main -->
-    <main class="flex-grow-1">Main</main>
+    <main class="flex-grow-1">
+      <div class="container-custom">
+        <!-- Carousel -->
+        <section id="carouselExampleFade" class="carousel slide carousel-fade">
+          <div class="carousel-inner image-padding-top">
+            <div class="carousel-item active">
+              <img
+                src="https://picsum.photos/600/400?random=1"
+                class="img-cover"
+                alt="..."
+              />
+              <div class="carousel-caption">
+                <h4 class="mb-0 text-line-clamp-2">First slide title</h4>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://picsum.photos/600/400?random=2"
+                class="img-cover"
+                alt="..."
+              />
+              <div class="carousel-caption">
+                <h4 class="mb-0 text-line-clamp-2">Second slide title</h4>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://picsum.photos/600/400?random=3"
+                class="img-cover"
+                alt="..."
+              />
+              <div class="carousel-caption">
+                <h4 class="mb-0 text-line-clamp-2">Third slide title</h4>
+              </div>
+            </div>
+          </div>
+          <!-- Previous carousel -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+
+          <!-- Next carousel -->
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </section>
+
+        <section class="content content-spacing">
+          <div class="row gy-4">
+            <div class="col-lg-7 col-xl-8">
+              <span class="content-title">Tiêu điểm</span>
+              <div class="row gy-4">
+                <div class="col-xl-8">
+                  <div class="content-item">
+                    <figure class="image-padding-top mb-10px">
+                      <img
+                        src="https://picsum.photos/600/400?random=4"
+                        class="img-cover position-absolute top-0 left-0"
+                        alt=""
+                      />
+                    </figure>
+                    <div class="article-title mb-10px text-line-clamp-2">
+                      Title 1
+                    </div>
+                    <div class="article-category mb-10px">Tiêu điểm</div>
+                    <div class="article-desc text-line-clamp-4">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4">
+                  <div class="row gy-3">
+                    <div class="col-6 col-xl-12">
+                      <div class="content-item">
+                        <figure class="image-padding-top mb-10px">
+                          <img
+                            src="https://picsum.photos/600/400?random=5"
+                            class="img-cover position-absolute top-0 left-0"
+                            alt=""
+                          />
+                        </figure>
+                        <div
+                          class="article-title sub mb-10px text-line-clamp-2"
+                        >
+                          Title 1
+                        </div>
+                        <div class="article-category mb-10px">Tiêu điểm</div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-xl-12">
+                      <div class="content-item">
+                        <figure class="image-padding-top mb-10px">
+                          <img
+                            src="https://picsum.photos/600/400?random=6"
+                            class="img-cover position-absolute top-0 left-0"
+                            alt=""
+                          />
+                        </figure>
+                        <div
+                          class="article-title sub mb-10px text-line-clamp-2"
+                        >
+                          Title 1
+                        </div>
+                        <div class="article-category mb-10px">Asean</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-none d-lg-flex col-lg-1 max-w-40px">
+              <div class="line-seperate-vertical"></div>
+            </div>
+
+            <div class="d-lg-none col-lg-1">
+              <div class="line-seperate-horizontal"></div>
+            </div>
+
+            <div class="col-lg-4 col-xl-3 flex-grow-1">
+              <span class="content-title">Tin tức</span>
+
+              <ul class="content-ul-list">
+                <li class="mb-2">
+                  <div class="text-line-clamp-3">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </div>
+                </li>
+                <li class="mb-2"> 
+                  <div class="text-line-clamp-3">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </div>
+                </li>
+                <li class="mb-2"> 
+                  <div class="text-line-clamp-3">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
 
     <!-- Footer -->
     <footer>Footer</footer>
