@@ -43,7 +43,12 @@
             <a href="javascript:void(0)" class="choose-lang">Русский</a>
           </div>
 
-          <a class="mobile-menu d-lg-none" href="javascript:void(0)">
+          <a
+            class="mobile-menu d-lg-none cursor-pointer"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasResponsive"
+            aria-controls="offcanvasResponsive"
+          >
             <i class="fa-solid fa-bars-staggered fs-2"></i>
           </a>
         </section>
@@ -645,7 +650,140 @@
 
     <!-- Footer -->
     <footer>
-      <div class="container-custom">Footer</div>
+      <div class="container-custom">
+        <div
+          class="d-none d-lg-flex align-items-center gap-32px flex-wrap py-4"
+        >
+          <img
+            src="./assets/images/footer1.png"
+            class="img-contain max-h-30px w-auto"
+            alt=""
+          />
+          <img
+            src="./assets/images/footer2.png"
+            class="img-contain max-h-30px w-auto"
+            alt=""
+          />
+          <img
+            src="./assets/images/footer3.png"
+            class="img-contain max-h-30px w-auto"
+            alt=""
+          />
+          <img
+            src="./assets/images/footer4.png"
+            class="img-contain max-h-30px w-auto"
+            alt=""
+          />
+          <img
+            src="./assets/images/footer5.jpg"
+            class="img-contain max-h-30px w-auto"
+            alt=""
+          />
+          <img
+            src="./assets/images/footer6.jpg"
+            class="img-contain max-h-30px w-auto"
+            alt=""
+          />
+          <img
+            src="./assets/images/footer7.jpg"
+            class="img-contain max-h-30px w-auto"
+            alt=""
+          />
+          <img
+            src="./assets/images/footer8.jpg"
+            class="img-contain max-h-30px w-auto"
+            alt=""
+          />
+          <img
+            src="./assets/images/footer9.jpg"
+            class="img-contain max-h-30px w-auto"
+            alt=""
+          />
+          <img
+            src="./assets/images/footer10.jpg"
+            class="img-contain max-h-30px w-auto"
+            alt=""
+          />
+          <img
+            src="./assets/images/footer11.jpg"
+            class="img-contain max-h-30px w-auto"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="bg-main-grey-color-3 py-4">
+        <div class="container-custom">
+          <div class="d-flex flex-column flex-sm-row gap-4">
+            <div
+              class="d-flex align-items-center justify-content-center justify-content-sm-end w-sm-40"
+            >
+              <figure class="mb-0 h-63px">
+                <img
+                  src="./assets/images/logo-footer.svg"
+                  class="img-contain"
+                  alt=""
+                />
+              </figure>
+            </div>
+
+            <div class="d-flex flex-column gap-1 flex-1">
+              <div>
+                Nhà cung cấp thông tin(ICP): Thông tấn xã Việt Nam | ISSN : 1606
+                - 0261
+              </div>
+              <div>Giấy phép số 137/GP-BTTTT cấp ngày 17/03/2022</div>
+              <div>
+                Cơ quan chủ quản: Thông tấn xã Việt Nam | Tổng Biên tập: Nguyễn
+                Thắng
+              </div>
+              <div>Địa chỉ: 79 Lý Thường Kiệt - Hà Nội</div>
+              <div>Tel. (84-24) 39332300 | Fax:(84-24) 3933 2291</div>
+              <div>Email: vietnamvnp@gmail.com</div>
+              <div>Bản quyền © Báo ảnh Việt Nam</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
+
+    <!-- Navigation mobile menu -->
+
+    <div
+      class="offcanvas-lg offcanvas-end d-lg-none"
+      tabindex="-1"
+      id="offcanvasResponsive"
+      aria-labelledby="offcanvasResponsiveLabel"
+    >
+      <div class="offcanvas-header justify-content-end">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          data-bs-target="#offcanvasResponsive"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <a href="javascript:void(0)" class="menu-mobile-item py-2">
+          Tiêu điểm
+        </a>
+        <a href="javascript:void(0)" class="menu-mobile-item py-2"> Tin tức </a>
+        <a href="javascript:void(0)" class="menu-mobile-item py-2">
+          Phóng sự chuyên đề
+        </a>
+        <a href="javascript:void(0)" class="menu-mobile-item py-2">
+          Khám phá
+        </a>
+        <a href="javascript:void(0)" class="menu-mobile-item py-2"> Văn hóa </a>
+        <a href="javascript:void(0)" class="menu-mobile-item py-2"> Kinh tế </a>
+        <a href="javascript:void(0)" class="menu-mobile-item py-2">
+          Chân dung
+        </a>
+        <a href="javascript:void(0)" class="menu-mobile-item py-2">
+          Multimedia
+        </a>
+      </div>
+    </div>
   </body>
 </html>
