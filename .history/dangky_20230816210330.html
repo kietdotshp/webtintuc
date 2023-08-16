@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+		crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+
+				<h4 style="margin: 30px 0px;">FORM ĐĂNG KÝ TÀI KHOẢN</h4>
+
+				<form action="" method="" name="register" onsubmit="return FormValidate();">
+
+					<div class="form-row">
+						<div class="form-group col-md-12">
+							<label for="name">Họ tên <span style="color: red;" id="errorName">(*)</span></label>
+							<input type="text" name="name" class="form-control" id="name" />
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group col-md-12">
+							<label for="username">Username <span style="color: red;"
+									id="erroruserName">(*)</span></label>
+							<input type="text" name="username" class="form-control" id="username" />
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group col-md-12">
+							<label for="phone">Phone <span style="color: red;" id="erorPhone">(*)</span></label>
+							<input type="text" name="phone" class="form-control" id="phone" />
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group col-md-12">
+							<label for="email">Email <span style="color: red;" id="erorEmail">(*)</span></label>
+							<input type="text" name="email" class="form-control" id="email" />
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group col-md-12">
+							<label for="pass">Mật khẩu <span style="color: red;" id="errorPass">(*)</span></label>
+							<input type="password" name="passw" class="form-control" id="pass" />
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-12">
+							<label for="passw">Nhập lại mật khẩu <span style="color: red;"
+									id="errorConPass">(*)</span></label>
+							<input type="password" name="con_passw" class="form-control" id="passw" />
+						</div>
+
+					</div>
+
+					<div class="form-row">
+						<div class="form-group col-md-12">
+							<label for="birthday">Ngày sinh <span style="color: red;"
+									id="errorbirthday">(*)</span></label>
+							<input type="date" name="birthday" class="form-control" id="birthday" />
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="gender">Gender <span style="color: red;" id="errorgender">(*)</span></label>
+						<div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="gender" value="male" id="male" checked><label
+									class="form-check-lable" for="male">Nam</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="gender" value="female"
+									id="female"><label class="form-check-lable" for="female">Nữ</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="gender" value="other"
+									id="other"><label class="form-check-lable" for="other">Khác</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-12">
+							<label for="address">Address </label>
+							<input type="text" name="address" class="form-control" id="address" />
+						</div>
+					</div>
+
+					<button type="submit" id="showSuccess" class="btn btn-primary">Đăng ký</button>
+					<button type="reset" class="btn btn-danger">Thoát</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script>
+    function FormValidate() {
+        var errorName = document.getElementById("errorName");
+        var erroruserName = document.getElementById("erroruserName");
+        var errorPass = document.getElementById("errorPass");
+        var errorConPass = document.getElementById("errorConPass");
+        var errorEmail = document.getElementById("errorEmail");
+        var errorbirthday = document.getElementById("errorbirthday");
+        var errorPhone = document.getElementById("errorPhone");
+
+        var fullName = document.forms["register"]["name"].value;
+        var userName = document.forms["register"]["username"].value;
+        var password = document.forms["register"]["passw"].value;
+        var confirmPassword = document.forms["register"]["con_passw"].value;
+        var email = document.forms["register"]["email"].value;
+        var birthday = document.forms["register"]["birthday"].value;
+        var mobile = document.forms["register"]["phone"].value;
+        
+        // Reset previous error messages
+        errorName.innerHTML = "";
+        erroruserName.innerHTML = "";
+        errorPass.innerHTML = "";
+        errorConPass.innerHTML = "";
+        errorEmail.innerHTML = "";
+        errorbirthday.innerHTML = "";
+        errorPhone.innerHTML = "";
+        
+        // Validate FullName
+        if (fullName == "") {
+            errorName.innerHTML = "Họ tên không được để trống.";
+            return false;
+        } else if (fullName.length > 200) {
+            errorName.innerHTML = "Họ tên không được vượt quá 200 ký tự.";
+            return false;
+        }
+        
+        // Validate UserName
+        if (userName == "") {
+            erroruserName.innerHTML = "Username không được để trống.";
+            return false;
+        } else if (userName.length > 200) {
+            erroruserName.innerHTML = "Username không được vượt quá 200 ký tự.";
+            return false;
+        } else if (!/^[a-zA-Z0-9_]+$/.test(userName)) {
+            erroruserName.innerHTML = "Username chỉ được chứa chữ, số và dấu gạch dưới.";
+            return false;
+        }
+        
+        // Validate Password
+        if (password == "") {
+            errorPass.innerHTML = "Mật khẩu không được để trống.";
+            return false;
+        } else if (password.length <= 5 || password.length > 50) {
+            errorPass.innerHTML = "Mật khẩu phải có ít nhất 6 ký tự và không được vượt quá 50 ký tự.";
+            return false;
+        }
+        
+        // Validate Confirm Password
+        if (password !== confirmPassword) {
+            errorConPass.innerHTML = "Mật khẩu nhập lại không khớp.";
+            return false;
+        }
+        
+        // Validate Email
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            errorEmail.innerHTML = "Email không đúng định dạng.";
+            return false;
+        } else if (email.length > 100) {
+            errorEmail.innerHTML = "Email không được vượt quá 100 ký tự.";
+            return false;
+        }
+        
+        // Validate Birthday
+        var today = new Date().toISOString().split('T')[0];
+        if (birthday == "") {
+            errorbirthday.innerHTML = "Ngày sinh không được để trống.";
+            return false;
+        } else if (birthday > today) {
+            errorbirthday.innerHTML = "Ngày sinh không được lớn hơn ngày hiện tại.";
+            return false;
+        }
+        
+        // Validate Mobile
+        if (!/^(?:\+84|0)[1-9]\d{8,9}$/.test(mobile)) {
+            errorPhone.innerHTML = "Số điện thoại không đúng định dạng.";
+            return false;
+        }
+        
+        return true;
+    }
+		}
+		document.getElementById("showSuccess").addEventListener("click", function () {
+			//toastr.success("Đăng ký thành công!", "Success");
+			if (!FormValidate()) {
+
+				toastr.error("Đăng ký thất bại!", "Kiểm tra lại");
+				
+			}
+			else {
+				toastr.success("Đăng ký thành công!", "Success");	
+			}
+
+		});
+	</script>
+	<script>
+
+	</script>
+
+</body>
+
+</html>
