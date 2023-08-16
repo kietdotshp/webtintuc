@@ -52,9 +52,10 @@ a {
 }
 
 .container-custom {
-  max-width: 1400px;
+  max-width: 1600px;
   padding-inline: 15px;
   margin: 0 auto;
+  position: sticky;
 
   @media (min-width: 768px) {
     padding-inline: 30px;
@@ -409,3 +410,4 @@ a {
   width: 300px !important;
 
 }
+
