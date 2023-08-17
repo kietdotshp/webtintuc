@@ -54,7 +54,7 @@ function watchWindowChange() {
     )
     if (document.documentElement.classList.contains('dark-theme')) {
       navbar[0].classList.add('bg-main-red-color')
-    }else {
+    } else {
       navbar[0].classList.remove('bg-main-red-color')
     }
   }
