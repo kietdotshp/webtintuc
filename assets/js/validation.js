@@ -83,7 +83,7 @@ function validateForm() {
   ) {
     handleValidationMess(
       fieldConfirmPassword,
-      'Xác nhận phải từ 6 đến 50 ký tự!'
+      'Xác nhận mật khẩu phải từ 6 đến 50 ký tự!'
     )
     isValid = false
   } else if (confirmPasswordValue !== passwordValue) {
