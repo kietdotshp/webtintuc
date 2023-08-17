@@ -453,3 +453,20 @@ a {
 .navbar-custom {
   background-color: var(--main-white-color);
 }
+
+.required {
+  position: relative;
+}
+
+.required::after {
+  position: absolute;
+  content: '(*)';
+  color: #f00;
+  top: 0;
+  right: -20px;
+}
+
+.show-error {
+  margin-left: 20px;
+  color: #f00;
+}
