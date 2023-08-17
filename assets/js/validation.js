@@ -20,7 +20,7 @@ function validateForm() {
   let fieldAddress = document.getElementById('address')
 
   // regex
-  let specialCharacter = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/
+  let specialCharacterRegex = /[`!@#$%^&*()+\-=\[\]{};':"\\|,.<>\/?~]/
   let regexEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/
   let regexMobile = /^(?:\+84|0)[1-9][0-9]{8}$/
 
@@ -32,7 +32,7 @@ function validateForm() {
   } else if (nameValue.length > 200) {
     handleValidationMess(fieldName, 'Họ tên không quá 200 ký tự!')
     isValid = false
-  } else if (specialCharacter.test(nameValue)) {
+  } else if (specialCharacterRegex.test(nameValue)) {
     handleValidationMess(fieldName, 'Họ tên không được chứa ký tự đặc biệt!')
     isValid = false
   } else {
@@ -47,7 +47,7 @@ function validateForm() {
   } else if (usernameValue.length > 200) {
     handleValidationMess(fieldUserName, 'Username không quá 200 ký tự!')
     isValid = false
-  } else if (specialCharacter.test(usernameValue)) {
+  } else if (specialCharacterRegex.test(usernameValue)) {
     handleValidationMess(
       fieldUserName,
       'Username không được chứa ký tự đặc biệt!'
@@ -162,6 +162,13 @@ function validateForm() {
 document.getElementById('form').addEventListener('submit', function (event) {
   event.preventDefault()
   if (validateForm()) {
+    const formData = new FormData(event.target)
+    const formValues = Object.fromEntries(formData)
+    // get form values object
+    console.log(formValues)
     toastr.success('Đăng ký thành công!', 'Success')
+    setTimeout(() => {
+      window.location.href = 'HomePage.html'
+    }, 1000)
   }
 })
